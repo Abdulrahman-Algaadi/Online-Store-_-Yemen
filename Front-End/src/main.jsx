@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import { FavoritesProvider } from './context/FavoritesContext';
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <CartProvider>
           <FavoritesProvider>
             <App />
+            <SpeedInsights />
           </FavoritesProvider>
         </CartProvider>
       </AuthProvider>
